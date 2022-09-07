@@ -13,7 +13,7 @@ function getMaxLengthString(arrayOfString) {
   // console.log(longest)
   let longest
   for (let item of arrayOfString) {
-    if (item.lenght > longest.lenght) {
+    if (item.length > longest.length) {
       longest = item
     }
     return longest
