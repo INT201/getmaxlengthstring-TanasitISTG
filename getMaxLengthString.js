@@ -11,6 +11,16 @@ function getMaxLengthString(arrayOfString) {
   //   }
   // }
   // console.log(longest)
+  let longest
+  for (let item of arrayOfString) {
+    if (item.lenght > longest.lenght) {
+      longest = item
+    }
+    return longest
+  }
+  if (arrayOfString.includes(undefined) | arrayOfString.includes(null)) {
+    return undefined
+  }
 }
 
 module.exports = getMaxLengthString
