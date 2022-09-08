@@ -6,17 +6,18 @@ function getMaxLengthString(arrayOfString) {
   if (arrayOfString === undefined || arrayOfString === null) {
     return undefined;
   }
-  for (let i = 0; i < arrayOfString.length; i++) {
-    if (arrayOfString[i].length > longest) {
-      longest = arrayOfString[i].length;
-    }
-  }
-  for (let i = 0; i < arrayOfString.length; i++) {
-    if (arrayOfString[i].length === longest) {
-      longestString.push(arrayOfString[i]);
+
+  for (let string of arrayOfString) {
+    if (string.length > longest) {
+      longest = string.length;
+      longestString = [string];
+    } else if (string.length === longest) {
+      longestString.push(string);
     }
   }
   return longestString;
 }
+
+console.log(getMaxLengthString(['hello', 'hi', 'hey', 'Good Evening', 'Good Morning']))
 
 module.exports = getMaxLengthString
